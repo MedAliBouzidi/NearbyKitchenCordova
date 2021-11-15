@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
+    <meta name="color-scheme" content="light dark">
+    <title>Nearby Kitchen - Search</title>
+
+    <!-- Jquery -->
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+    <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../css/custom.css">
+
+</head>
+
+<body>
+
+    <div data-role="page" id="search">
+        <div data-role="header" data-position="fixed" class="d-flex bg-yellow">
+            <div class="fs-1 cursor-pointer">
+                <a data-rel="back" data-transition="slidefade" data-direction="reverse" class="text-decoration-none text-red">
+                    <i class="fas fa-arrow-left p-3"></i>
+                </a>
+            </div>
+            <h2 class="text-green fs-3">Search</h2>
+        </div>
+        <div data-role="main" class="ui-content bg-yellow min-vh-100">
+            <!-- Page Content -->
+            <ul data-role="listview" class="m-3">
+                <li data-icon="false" class="fs-3 bg-green mb-3 shadow d-flex justify-content-between">
+                    <span class="p-3">Restaurant n°1</span>
+                    <a href="restaurant.html" data-rel="page" data-transition="slidefade" class="w-10 bg-green fs-4">
+                        <i class="fas fa-arrow-right text-red"></i>
+                    </a>
+                </li>
+                <li data-icon="false" class="fs-3 bg-green mb-3 shadow d-flex justify-content-between">
+                    <span class="p-3">Restaurant n°2</span>
+                    <a href="restaurant.html" data-rel="page" data-transition="slidefade" class="w-10 bg-green fs-4">
+                        <i class="fas fa-arrow-right text-red"></i>
+                    </a>
+                </li>
+                <li data-icon="false" class="fs-3 bg-green mb-3 shadow d-flex justify-content-between">
+                    <span class="p-3">Restaurant n°3</span>
+                    <a href="restaurant.html" data-rel="page" data-transition="slidefade" class="w-10 bg-green fs-4">
+                        <i class="fas fa-arrow-right text-red"></i>
+                    </a>
+                </li>
+                <li data-icon="false" class="fs-3 bg-green mb-3 shadow d-flex justify-content-between">
+                    <span class="p-3">Restaurant n°4</span>
+                    <a href="restaurant.html" data-rel="page" data-transition="slidefade" class="w-10 bg-green fs-4">
+                        <i class="fas fa-arrow-right text-red"></i>
+                    </a>
+                </li>
+            </ul>
+            <div data-postion="fixed" class="map m-3" id="map" style="display: flex; justify-content: center; align-items: center; font-size: 10rem;">MAP</div>
+        </div>
+    </div>
+
+    <!-- Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+</body>
+
+</html>
