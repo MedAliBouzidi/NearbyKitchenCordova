@@ -1,3 +1,7 @@
+body {
+    margin: 0 !important;
+}
+
 .text-green {
     color: #52942F !important;
 }
@@ -43,33 +47,37 @@
     min-height: 93vh;
 }
 
+.logo-size {
+    width: 20rem;
+}
+
 .log-in-img {
-    width: 15rem;
-    height: 15rem;
+    width: 10rem;
+    height: 10rem;
     background-image: url("../img/log-in.png");
     background-size: cover;
     background-position: center;
 }
 
 .sign-up-img {
-    width: 15rem;
-    height: 15rem;
+    width: 10rem;
+    height: 10rem;
     background-image: url("../img/sign-up.png");
     background-size: cover;
     background-position: center;
 }
 
 .search-img {
-    width: 15rem;
-    height: 15rem;
+    width: 10rem;
+    height: 10rem;
     background-image: url("../img/search.png");
     background-size: cover;
     background-position: center;
 }
 
 .favorite-img {
-    width: 15rem;
-    height: 15rem;
+    width: 10rem;
+    height: 10rem;
     background-image: url("../img/favorite.png");
     background-size: cover;
     background-position: center;
@@ -77,6 +85,10 @@
 
 .w-10 {
     width: 10%;
+}
+
+.w-4-rem {
+    width: 4rem;
 }
 
 .w-15-rem {
@@ -98,7 +110,7 @@
 }
 
 .star {
-    color: #ffd32a;
+    color: #ffd32a !important;
 }
 
 input::placeholder {
