@@ -12,11 +12,13 @@
     <title>Nearby Kitchen - Restaurant</title>
 
     <!-- Jquery -->
-    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
-    <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
-    <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    <link rel="stylesheet" href="../css/jquery.mobile-1.4.5.min.css" />
+    <script src="../js/jquery-1.11.1.min.js"></script>
+    <script src="../js/jquery.mobile-1.4.5.min.js"></script>
     <!-- Bootstrap CSS -->
     <link href="../css/bootstrap.min.css" rel="stylesheet" />
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="../css/all.css">
     <!-- Custom CSS -->
     <link rel="stylesheet" href="../css/custom.css">
 
@@ -38,42 +40,43 @@
                 <img src="../img/svg/star-solid.svg" alt="star">
             </div>
         </div>
-    </div>
-    <div data-role="main" class="ui-content bg-yellow min-vh-93 p-5 d-flex flex-column justify-content-center">
-        <!-- Page Content -->
-        <div class="fs-4-rem d-flex justify-content-center">
-            <img src="../img/svg/hamburger-solid.svg" alt="food" class="w-4-rem">
-            <h1 class="text-red mx-5">Open Now</h2>
+        <div data-role="main" class="ui-content bg-yellow min-vh-93 p-5 d-flex flex-column justify-content-center">
+            <!-- Page Content -->
+            <div class="fs-4-rem d-flex justify-content-center">
+                <img src="../img/svg/hamburger-solid.svg" alt="food" class="w-4-rem">
+                <h1 class="text-red mx-5">Open Now</h2>
+            </div>
+            <div class="fs-4-rem text-center mt-4">
+                <img src="../img/svg/star-solid.svg" alt="star" class="w-3-rem">
+                <img src="../img/svg/star-solid.svg" alt="star" class="w-3-rem">
+                <img src="../img/svg/star-solid.svg" alt="star" class="w-3-rem">
+                <img src="../img/svg/star-half-alt-solid.svg" alt="star" class="w-3-rem">
+                <img src="../img/svg/star-regular.svg" alt="star" class="w-3-rem">
+            </div>
+            <div>
+                <h3 class="fw-normal text-capitalize text-center mt-4">
+                    Total User ratings:
+                    <span class="text-red">1184</span>
+                </h3>
+            </div>
+            <div class="text-center mt-3 d-inline-flex align-self-center justify-content-center w-4-rem0">
+                <h2 class="m-3 mt-0 mb-0 p-3 pt-2 pb-2 bg-green">bar</h2>
+                <h2 class="m-3 mt-0 mb-0 p-3 pt-2 pb-2 bg-green">food</h2>
+                <h2 class="m-3 mt-0 mb-0 p-3 pt-2 pb-2 bg-green">restaurant</h2>
+            </div>
         </div>
-        <div class="fs-4-rem text-center mt-4">
-            <img src="../img/svg/star-solid.svg" alt="star" class="w-3-rem">
-            <img src="../img/svg/star-solid.svg" alt="star" class="w-3-rem">
-            <img src="../img/svg/star-solid.svg" alt="star" class="w-3-rem">
-            <img src="../img/svg/star-half-alt-solid.svg" alt="star" class="w-3-rem">
-            <img src="../img/svg/star-regular.svg" alt="star" class="w-3-rem">
+        <div data-role="footer" data-position="fixed" id="footer" class="bg-yellow text-center">
+            <a href="#" data-rel="page" data-transition="slidefade" class="text-capitalize fs-6">
+                <i class="fas fa-sign-out-alt text-blue"></i>
+                <span class="text-blue">Log out</span>
+            </a>
         </div>
-        <div>
-            <h3 class="fw-normal text-capitalize text-center mt-4">
-                Total User ratings:
-                <span class="text-red">1184</span>
-            </h3>
-        </div>
-        <div class="text-center mt-3 d-inline-flex align-self-center justify-content-center w-4-rem0">
-            <h2 class="m-3 mt-0 mb-0 p-3 pt-2 pb-2 bg-green">bar</h2>
-            <h2 class="m-3 mt-0 mb-0 p-3 pt-2 pb-2 bg-green">food</h2>
-            <h2 class="m-3 mt-0 mb-0 p-3 pt-2 pb-2 bg-green">restaurant</h2>
-        </div>
-    </div>
-    <div data-role="footer" data-position="fixed" id="footer" class="bg-yellow text-center">
-        <a href="#" data-rel="page" data-transition="slidefade" class="text-capitalize fs-6">
-            <i class="fas fa-sign-out-alt text-blue"></i>
-            <span class="text-blue">Log out</span>
-        </a>
-    </div>
     </div>
 
     <!-- Bootstrap Bundle with Popper -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
 </body>
 
 </html>
