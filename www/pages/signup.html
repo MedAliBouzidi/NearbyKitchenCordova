@@ -1,77 +1,41 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;">
-    <meta name="format-detection" content="telephone=no">
-    <meta name="msapplication-tap-highlight" content="no">
-    <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
-    <meta name="color-scheme" content="light dark">
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Nearby Kitchen - Sign Up</title>
-
-    <!-- Jquery -->
-    <link rel="stylesheet" href="../css/jquery.mobile-1.4.5.min.css" />
-    <script src="../js/jquery-1.11.1.min.js"></script>
-    <script src="../js/jquery.mobile-1.4.5.min.js"></script>
-    <!-- Bootstrap CSS -->
-    <link href="../css/bootstrap.min.css" rel="stylesheet" />
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="../css/all.css">
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="../css/custom.css">
-
-</head>
-
-<body>
-
-    <div data-role="page" id="sign-up">
-        <div data-role="header" data-position="fixed">
-            <!-- Red Back Arrow -->
-            <div class="bg-yellow fs-1 cursor-pointer">
-                <a data-rel="back" data-transition="slidefade" data-direction="reverse" class="text-decoration-none text-red">
-                    <img src="../img/svg/arrow-left-solid.svg" alt="arrow-left" class="w-4-rem p-3">
-                </a>
-            </div>
-        </div>
-        <div data-role="main" class="ui-content bg-yellow min-vh-93 p-5 d-flex flex-column justify-content-center">
-            <!-- Page Content -->
-            <h1 class="text-green text-center">Create Account</h1>
-            <form class="mt-5">
-                <div class="mb-3">
-                    <label for="nameInput" class="mb-2">Name: </label>
-                    <input type="text" id="nameInput" class="form-control bg-green" placeholder="John Smith">
-                </div>
-                <div class="mb-3">
-                    <label for="emailInput" class="mb-2">Email: </label>
-                    <input type="email" id="emailInput" class="form-control bg-green" placeholder="john.smith@gmail.com">
-                </div>
-                <div class="mb-3">
-                    <label for="passwordInput" class="mb-2">Password: </label>
-                    <input type="password" id="passwordInput" class="form-control bg-green" placeholder="********">
-                </div>
-                <div>
-                    <label for="confirmPasswordInput" class="mb-2">Confirm Password: </label>
-                    <input type="password" id="confirmPasswordInput" class="form-control bg-green" placeholder="********">
-                </div>
-                <button type="submit" class="rounded-btn w-100 py-2 bg-red text-light fs-6 mt-4 text-capitalize">Sign Up</button>
-            </form>
-            <p class="text-center mt-4">
-                Already have an account?
-                <a href="login.html" data-rel="page" data-transition="slidefade" class="text-green fw-bold text-capitalize text-decoration-none cursor-pointer">Log in</a>
-            </p>
-            <div class="fs-1 text-center">
-                <img src="../img/facebook-logo.png" class="social-media-icon mx-2" alt="facebook-logo" />
-                <img src="../img/google-logo.png" class="social-media-icon mx-2" alt="google-logo" />
-            </div>
+<div data-role="page" id="sign-up" class="vh-100 bg-yellow">
+    <div data-role="header" data-position="fixed" class="bg-yellow">
+        <!-- Red Back Arrow -->
+        <div class="fs-1 cursor-pointer">
+            <a data-rel="back" data-transition="slidefade" data-direction="reverse" class="text-decoration-none text-red">
+                <img src="../img/svg/arrow-left-solid.svg" alt="arrow-left" class="w-4-rem p-3">
+            </a>
         </div>
     </div>
-
-    <!-- Bootstrap Bundle with Popper -->
-    <script src="js/bootstrap.bundle.min.js"></script>
-    <script type="text/javascript" src="cordova.js"></script>
-    <script type="text/javascript" src="js/index.js"></script>
-</body>
-
-</html>
+    <div data-role="main" class="ui-content p-5 d-flex flex-column justify-content-center h-100">
+        <!-- Page Content -->
+        <h1 class="text-green text-center">Create Account</h1>
+        <form class="mt-5">
+            <div class="mb-3">
+                <label for="nameInput" class="mb-2">Name: </label>
+                <input type="text" id="nameInput" class="form-control bg-green" placeholder="John Smith">
+            </div>
+            <div class="mb-3">
+                <label for="emailInput" class="mb-2">Email: </label>
+                <input type="email" id="emailInput" class="form-control bg-green" placeholder="john.smith@gmail.com">
+            </div>
+            <div class="mb-3">
+                <label for="passwordInput" class="mb-2">Password: </label>
+                <input type="password" id="passwordInput" class="form-control bg-green" placeholder="********">
+            </div>
+            <div>
+                <label for="confirmPasswordInput" class="mb-2">Confirm Password: </label>
+                <input type="password" id="confirmPasswordInput" class="form-control bg-green" placeholder="********">
+            </div>
+            <button type="submit" class="rounded-btn w-100 py-2 bg-red text-light fs-6 mt-4 text-capitalize">Sign Up</button>
+        </form>
+        <p class="text-center mt-4">
+            Already have an account?
+            <a href="login.html" data-rel="page" data-transition="slidefade" class="text-green fw-bold text-capitalize text-decoration-none cursor-pointer">Log in</a>
+        </p>
+        <div class="fs-1 text-center">
+            <img src="../img/facebook-logo.png" class="social-media-icon mx-2" alt="facebook-logo" />
+            <img src="../img/google-logo.png" class="social-media-icon mx-2" alt="google-logo" />
+        </div>
+    </div>
+</div>
