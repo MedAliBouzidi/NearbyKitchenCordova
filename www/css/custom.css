@@ -1,13 +1,5 @@
-body {
-    margin: 0 !important;
-}
-
 .text-green {
     color: #52942F !important;
-}
-
-.text-yellow {
-    color: #FFF2CD !important;
 }
 
 .text-red {
@@ -43,14 +35,6 @@ body {
     cursor: pointer;
 }
 
-.min-vh-93 {
-    min-height: 93vh;
-}
-
-.logo-size {
-    width: 20rem;
-}
-
 .log-in-img {
     width: 10rem;
     height: 10rem;
@@ -83,10 +67,6 @@ body {
     background-position: center;
 }
 
-.w-10 {
-    width: 10%;
-}
-
 .w-4-rem {
     width: 4rem;
 }
@@ -103,21 +83,8 @@ body {
     width: 15rem;
 }
 
-.w-content {
-    width: fit-content;
-}
-
 .fs-4-rem {
     font-size: 4rem;
-}
-
-.map {
-    width: 95%;
-    height: 30rem;
-}
-
-.star {
-    color: #ffd32a !important;
 }
 
 input::placeholder {
