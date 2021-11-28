@@ -1,81 +1,52 @@
-<!DOCTYPE html>
-<html>
-
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;">
-    <meta name="format-detection" content="telephone=no">
-    <meta name="msapplication-tap-highlight" content="no">
-    <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
-    <meta name="color-scheme" content="light dark">
-    <title>Nearby Kitchen - Search</title>
-
-    <!-- Jquery -->
-    <link rel="stylesheet" href="../css/jquery.mobile-1.4.5.min.css" />
-    <script src="../js/jquery-1.11.1.min.js"></script>
-    <script src="../js/jquery.mobile-1.4.5.min.js"></script>
-    <!-- Bootstrap CSS -->
-    <link href="../css/bootstrap.min.css" rel="stylesheet" />
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="../css/all.css">
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="../css/custom.css">
-
-</head>
-
-<body>
-
-    <div data-role="page" id="search">
-        <div data-role="header" data-position="fixed" class="d-flex bg-yellow">
-            <div class="fs-1 cursor-pointer">
-                <a data-rel="back" data-transition="slidefade" data-direction="reverse" class="text-decoration-none text-red">
-                    <img src="../img/svg/arrow-left-solid.svg" alt="arrow-left" class="p-3">
-                </a>
-            </div>
-            <div class="d-flex justify-content-center w-100">
-                <h2 class="text-green fs-3 align-self-center">Search</h2>
-            </div>
+<div data-role="page" id="search" class="bg-yellow vh-100">
+    <div data-role="header" data-position="fixed" class="d-flex justify-content-center align-items-center bg-yellow">
+        <div class="cursor-pointer">
+            <a data-rel="back" data-transition="slidefade" data-direction="reverse" class="text-decoration-none">
+                <img src="../img/svg/arrow-left-solid.svg" alt="arrow-left" class="w-4-rem p-3">
+            </a>
         </div>
-        <div data-role="main" class="ui-content bg-yellow min-vh-100 d-flex flex-column justify-content-center align-items-center">
-            <!-- Page Content -->
-            <ul data-role="listview" class="m-3 w-100">
-                <li data-icon="false" class="fs-3 bg-green mb-3 shadow d-flex justify-content-between">
-                    <a href="restaurant.html" data-rel="page" data-transition="slidefade" class="w-100 bg-green p-3 fs-4 justify-content-between text-decoration-none text-dark">
-                        <span>Restaurant n°1</span>
-                        <img src="../img/svg/arrow-right-solid.svg" alt="arrow-right" class="w-2-rem float-end">
-                    </a>
-                </li>
-                <li data-icon="false" class="fs-3 bg-green mb-3 shadow d-flex justify-content-between">
-                    <a href="restaurant.html" data-rel="page" data-transition="slidefade" class="w-100 bg-green p-3 fs-4 justify-content-between text-decoration-none text-dark">
-                        <span>Restaurant n°2</span>
-                        <img src="../img/svg/arrow-right-solid.svg" alt="arrow-right" class="w-2-rem float-end">
-                    </a>
-                </li>
-                <li data-icon="false" class="fs-3 bg-green mb-3 shadow d-flex justify-content-between">
-                    <a href="restaurant.html" data-rel="page" data-transition="slidefade" class="w-100 bg-green p-3 fs-4 justify-content-between text-decoration-none text-dark">
-                        <span>Restaurant n°3</span>
-                        <img src="../img/svg/arrow-right-solid.svg" alt="arrow-right" class="w-2-rem float-end">
-                    </a>
-                </li>
-                <li data-icon="false" class="fs-3 bg-green mb-3 shadow d-flex justify-content-between">
-                    <a href="restaurant.html" data-rel="page" data-transition="slidefade" class="w-100 bg-green p-3 fs-4 justify-content-between text-decoration-none text-dark">
-                        <span>Restaurant n°4</span>
-                        <img src="../img/svg/arrow-right-solid.svg" alt="arrow-right" class="w-2-rem float-end">
-                    </a>
-                </li>
-            </ul>
-            <div data-postion="fixed" class="map m-3">
-                <div id="map-canvas"></div>
-            </div>
-        </div>
+        <h2 class="text-green fs-3">Search</h2>
     </div>
+    <div data-role="main" class="ui-content d-flex flex-column justify-content-center">
+        <!-- Page Content -->
+        <ul data-role="listview" class="m-1">
+            <li data-icon="false" class="bg-green shadow mb-2 d-flex justify-content-between align-items-center">
+                <span class="fs-4 text-dark px-2 ">Restaurant n°1</span>
+                <a href="restaurant.html" data-rel="page" data-transition="slidefade" class="bg-green p-4">
+                    <img src="../img/svg/arrow-right-solid.svg" alt="arrow-right" class="w-2-rem m-2"/>
+                </a>
+            </li>
+            <li data-icon="false" class="bg-green shadow mb-2 d-flex justify-content-between align-items-center">
+                <span class="fs-4 text-dark px-2 ">Restaurant n°2</span>
+                <a href="restaurant.html" data-rel="page" data-transition="slidefade" class="bg-green p-4">
+                    <img src="../img/svg/arrow-right-solid.svg" alt="arrow-right" class="w-2-rem m-2"/>
+                </a>
+            </li>
+            <li data-icon="false" class="bg-green shadow mb-2 d-flex justify-content-between align-items-center">
+                <span class="fs-4 text-dark px-2 ">Restaurant n°3</span>
+                <a href="restaurant.html" data-rel="page" data-transition="slidefade" class="bg-green p-4">
+                    <img src="../img/svg/arrow-right-solid.svg" alt="arrow-right" class="w-2-rem m-2"/>
+                </a>
+            </li>
+            <li data-icon="false" class="bg-green shadow mb-2 d-flex justify-content-between align-items-center">
+                <span class="fs-4 text-dark px-2 ">Restaurant n°4</span>
+                <a href="restaurant.html" data-rel="page" data-transition="slidefade" class="bg-green p-4">
+                    <img src="../img/svg/arrow-right-solid.svg" alt="arrow-right" class="w-2-rem m-2"/>
+                </a>
+            </li>
+            <li data-icon="false" class="bg-green shadow mb-2 d-flex justify-content-between align-items-center">
+                <span class="fs-4 text-dark px-2 ">Restaurant n°5</span>
+                <a href="restaurant.html" data-rel="page" data-transition="slidefade" class="bg-green p-4">
+                    <img src="../img/svg/arrow-right-solid.svg" alt="arrow-right" class="w-2-rem m-2"/>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <div data-role="footer" data-position="fixed" class="w-100 h-50">
+        <div id="map-canvas"></div>
+    </div>
+</div>
 
-    <!-- Bootstrap Bundle with Popper -->
-    <script src="js/bootstrap.bundle.min.js"></script>
-    <script type="text/javascript" src="cordova.js"></script>
-    <script type="text/javascript" src="js/index.js"></script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDPTq0ikP94SeTTqtQWyElgPNqyw0SSUrc" type="text/javascript"></script>
-    <script src="../js/geolocalisation.js"></script>
-</body>
-
-</html>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDPTq0ikP94SeTTqtQWyElgPNqyw0SSUrc"
+        type="text/javascript"></script>
+<script src="../js/geolocation.js"></script>
