@@ -1,8 +1,0 @@
-.load-screen {
-    height: 100vh;
-    background-color: #FFF2CD;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
