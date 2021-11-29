@@ -21,7 +21,6 @@
         <splash src="res/screen/android/drawable-land-ldpi/screen.png" density="land-ldpi" />
         <splash src="res/screen/android/drawable-land-mdpi/screen.png" density="land-mdpi" />
         <splash src="res/screen/android/drawable-land-xhdpi/screen.png" density="land-xhdpi" />
-
         <splash src="res/screen/android/drawable-port-hdpi/screen.png" density="port-hdpi" />
         <splash src="res/screen/android/drawable-port-ldpi/screen.png" density="port-ldpi" />
         <splash src="res/screen/android/drawable-port-mdpi/screen.png" density="port-mdpi" />
@@ -33,5 +32,4 @@
         <allow-intent href="itms-apps:*" />
     </platform>
     <plugin name="cordova-plugin-network-information" spec="^2.0.1" />
-    <engine name="android" spec="^7.1.4" />
 </widget>

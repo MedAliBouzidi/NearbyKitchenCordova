@@ -24,14 +24,19 @@
         "plugins": {
             "cordova-plugin-whitelist": {},
             "cordova-plugin-splashscreen": {},
+            "cordova-plugin-network-information": {},
             "cordova-plugin-geolocation": {
                 "GPS_REQUIRED": "true"
-            },
-            "cordova-plugin-network-information": {}
+            }
         },
         "platforms": [
-            "android",
-            "browser"
+            "browser",
+            "android"
         ]
+    },
+    "dependencies": {
+        "@googlemaps/js-api-loader": "^1.12.10",
+        "google-maps": "^4.3.3",
+        "load-google-maps-api": "^2.0.2"
     }
 }
