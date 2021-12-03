@@ -32,4 +32,6 @@
         <allow-intent href="itms-apps:*" />
     </platform>
     <plugin name="cordova-plugin-network-information" spec="^2.0.1" />
+
+    <icon src="res/icon/logo.png" />
 </widget>

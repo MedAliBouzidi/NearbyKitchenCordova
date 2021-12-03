@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<!--    <meta http-equiv="Content-Security-Policy"-->
-<!--          content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;">-->
+    <!--    <meta http-equiv="Content-Security-Policy"-->
+    <!--          content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;">-->
     <meta name="format-detection" content="telephone=no">
     <meta name="msapplication-tap-highlight" content="no">
     <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
@@ -12,20 +13,21 @@
     <title>Nearby Kitchen - Home</title>
 
     <!-- Jquery -->
-    <link rel="stylesheet" href="css/jquery.mobile-1.4.5.min.css"/>
+    <link rel="stylesheet" href="css/jquery.mobile-1.4.5.min.css" />
     <script src="js/jquery-1.11.1.min.js"></script>
     <script src="js/jquery.mobile-1.4.5.min.js"></script>
     <!-- Bootstrap CSS -->
-    <link href="css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
     <!-- Font Awesome -->
     <link rel="stylesheet" href="css/all.css">
     <!-- Custom CSS -->
     <link rel="stylesheet" href="css/custom.css">
 
     <!-- Google Maps Api -->
-    <script async type="text/javascript" src="https://maps.googleapis.com/maps/api/js?callback=initMap"></script>
+    <script async type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB36PAAvVMqyXDI2B6M8WqHFG5swgk5bpI&callback=initMap"></script>
 
 </head>
+
 <body>
     <div data-role="page" id="home" class="vh-100 bg-yellow d-flex flex-column align-items-center justify-content-center">
         <div data-role="content" id="main" class="ui-content">
@@ -35,29 +37,25 @@
             </div>
             <div id="menu" class="ui-grid-a">
                 <div class="ui-block-a text-center">
-                    <a href="pages/login.html" data-rel="page" data-transition="slidefade"
-                       class="ui-bar ui-bar-a bg-transparent border-0 p-2 text-decoration-none">
+                    <a href="pages/login.html" data-rel="page" data-transition="slidefade" class="ui-bar ui-bar-a bg-transparent border-0 p-2 text-decoration-none">
                         <div class="log-in-img shadow"></div>
                         <h2 class="text-capitalize text-center mt-2 text-green fs-3">Log in</h2>
                     </a>
                 </div>
                 <div class="ui-block-b text-center">
-                    <a href="pages/signup.html" data-rel="page" data-transition="slidefade"
-                       class="ui-bar ui-bar-a bg-transparent border-0 p-2 text-decoration-none">
+                    <a href="pages/signup.html" data-rel="page" data-transition="slidefade" class="ui-bar ui-bar-a bg-transparent border-0 p-2 text-decoration-none">
                         <div class="sign-up-img shadow"></div>
                         <h2 class="text-capitalize text-center mt-2 text-green fs-3">Sign up</h2>
                     </a>
                 </div>
                 <div class="ui-block-a text-center">
-                    <a href="#search" data-rel="page" data-transition="slidefade"
-                       class="ui-bar ui-bar-a bg-transparent border-0 p-2 text-decoration-none">
+                    <a href="#search" data-rel="page" data-transition="slidefade" class="ui-bar ui-bar-a bg-transparent border-0 p-2 text-decoration-none">
                         <div class="search-img shadow"></div>
                         <h2 class="text-capitalize text-center mt-2 text-green fs-3">Search</h2>
                     </a>
                 </div>
                 <div class="ui-block-b text-center">
-                    <a href="pages/favorite.html" data-rel="page" data-transition="slidefade"
-                       class="ui-bar ui-bar-a bg-transparent border-0 p-2 text-decoration-none">
+                    <a href="pages/favorite.html" data-rel="page" data-transition="slidefade" class="ui-bar ui-bar-a bg-transparent border-0 p-2 text-decoration-none">
                         <div class="favorite-img shadow"></div>
                         <h2 class="text-capitalize text-center mt-2 text-green fs-3">Favorite</h2>
                     </a>
@@ -87,31 +85,31 @@
                 <li data-icon="false" class="bg-green shadow mb-2 d-flex justify-content-between align-items-center">
                     <span class="fs-4 text-dark px-2 ">Restaurant n°1</span>
                     <a href="pages/restaurant.html" data-rel="page" data-transition="slidefade" class="bg-green p-4">
-                        <img src="img/svg/arrow-right-solid.svg" alt="arrow-right" class="w-2-rem m-2"/>
+                        <img src="img/svg/arrow-right-solid.svg" alt="arrow-right" class="w-2-rem m-2" />
                     </a>
                 </li>
                 <li data-icon="false" class="bg-green shadow mb-2 d-flex justify-content-between align-items-center">
                     <span class="fs-4 text-dark px-2 ">Restaurant n°2</span>
                     <a href="pages/restaurant.html" data-rel="page" data-transition="slidefade" class="bg-green p-4">
-                        <img src="img/svg/arrow-right-solid.svg" alt="arrow-right" class="w-2-rem m-2"/>
+                        <img src="img/svg/arrow-right-solid.svg" alt="arrow-right" class="w-2-rem m-2" />
                     </a>
                 </li>
                 <li data-icon="false" class="bg-green shadow mb-2 d-flex justify-content-between align-items-center">
                     <span class="fs-4 text-dark px-2 ">Restaurant n°3</span>
                     <a href="pages/restaurant.html" data-rel="page" data-transition="slidefade" class="bg-green p-4">
-                        <img src="img/svg/arrow-right-solid.svg" alt="arrow-right" class="w-2-rem m-2"/>
+                        <img src="img/svg/arrow-right-solid.svg" alt="arrow-right" class="w-2-rem m-2" />
                     </a>
                 </li>
                 <li data-icon="false" class="bg-green shadow mb-2 d-flex justify-content-between align-items-center">
                     <span class="fs-4 text-dark px-2 ">Restaurant n°4</span>
                     <a href="pages/restaurant.html" data-rel="page" data-transition="slidefade" class="bg-green p-4">
-                        <img src="img/svg/arrow-right-solid.svg" alt="arrow-right" class="w-2-rem m-2"/>
+                        <img src="img/svg/arrow-right-solid.svg" alt="arrow-right" class="w-2-rem m-2" />
                     </a>
                 </li>
                 <li data-icon="false" class="bg-green shadow mb-2 d-flex justify-content-between align-items-center">
                     <span class="fs-4 text-dark px-2 ">Restaurant n°5</span>
                     <a href="pages/restaurant.html" data-rel="page" data-transition="slidefade" class="bg-green p-4">
-                        <img src="img/svg/arrow-right-solid.svg" alt="arrow-right" class="w-2-rem m-2"/>
+                        <img src="img/svg/arrow-right-solid.svg" alt="arrow-right" class="w-2-rem m-2" />
                     </a>
                 </li>
             </ul>
@@ -130,4 +128,5 @@
     <script type="text/javascript" src="js/geolocation.js" defer></script>
 
 </body>
+
 </html>
