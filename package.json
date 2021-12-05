@@ -35,7 +35,7 @@
         ]
     },
     "dependencies": {
-        "@googlemaps/js-api-loader": "^1.12.10",
+        "axios": "^0.24.0",
         "google-maps": "^4.3.3",
         "load-google-maps-api": "^2.0.2"
     }

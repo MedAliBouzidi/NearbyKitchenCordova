@@ -1,3 +1,8 @@
+import axios from "../../node_modules/axios"
+
+const GOOGLE_MAPS_API_KEY = 'AIzaSyB36PAAvVMqyXDI2B6M8WqHFG5swgk5bpI'
+const mapCanvas = document.getElementById('map-canvas')
+
 initMap()
 
 function initMap() {
@@ -5,8 +10,6 @@ function initMap() {
 }
 
 function onSuccess(position) {
-    const mapCanvas = document.getElementById('map-canvas')
-
     let lat = position.coords.latitude
     let long = position.coords.longitude
 
@@ -20,8 +23,19 @@ function onSuccess(position) {
         }
     )
 
+    mapCanvas.innerHTML = `For Development purpose <br /> Latitude : ${latLong.lat()} <br /> Longitude : ${latLong.lng()}`
+
+    searchRestaurant(map)
 }
 
 function onError(error) {
     alert('code: ' + error.code + '\n' + 'message: ' + error.message + '\n')
+}
+
+function searchRestaurant(map) {
+    const service = new google.maps.places.PlacesService(map)
+    const req = {
+        fields: ["geometry", "name", "opening_hours", "rating", "user_ratings_total", "types"]
+    }
+
 }
