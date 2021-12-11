@@ -31,6 +31,7 @@
 </head>
 
 <body>
+    <!-- Home Page -->
     <div data-role="page" id="home" class="vh-100 bg-yellow d-flex flex-column align-items-center justify-content-center">
         <div data-role="content" id="main" class="ui-content">
             <!-- Page Content -->
@@ -39,13 +40,13 @@
             </div>
             <div id="menu" class="ui-grid-a">
                 <div class="ui-block-a text-center">
-                    <a href="pages/login.html" data-rel="page" data-transition="slidefade" class="ui-bar ui-bar-a bg-transparent border-0 p-2 text-decoration-none">
+                    <a href="#log-in" data-rel="page" data-transition="slidefade" class="ui-bar ui-bar-a bg-transparent border-0 p-2 text-decoration-none">
                         <div class="log-in-img shadow"></div>
                         <h2 class="text-capitalize text-center mt-2 text-green fs-3">Log in</h2>
                     </a>
                 </div>
                 <div class="ui-block-b text-center">
-                    <a href="pages/signup.html" data-rel="page" data-transition="slidefade" class="ui-bar ui-bar-a bg-transparent border-0 p-2 text-decoration-none">
+                    <a href="#sign-up" data-rel="page" data-transition="slidefade" class="ui-bar ui-bar-a bg-transparent border-0 p-2 text-decoration-none">
                         <div class="sign-up-img shadow"></div>
                         <h2 class="text-capitalize text-center mt-2 text-green fs-3">Sign up</h2>
                     </a>
@@ -57,21 +58,22 @@
                     </a>
                 </div>
                 <div class="ui-block-b text-center">
-                    <a href="pages/favorite.html" data-rel="page" data-transition="slidefade" class="ui-bar ui-bar-a bg-transparent border-0 p-2 text-decoration-none">
+                    <a href="#favorite" data-rel="page" data-transition="slidefade" class="ui-bar ui-bar-a bg-transparent border-0 p-2 text-decoration-none">
                         <div class="favorite-img shadow"></div>
                         <h2 class="text-capitalize text-center mt-2 text-green fs-3">Favorite</h2>
                     </a>
                 </div>
             </div>
         </div>
-        <div data-role="footer" data-position="fixed" id="footer" class="bg-yellow text-center" hidden>
-            <a href="#" data-rel="page" data-transition="slidefade" class="text-capitalize fs-6">
+        <div data-role="footer" data-position="fixed" id="home-footer" class="bg-yellow text-center" hidden>
+            <div id="log-out-btn" data-rel="page" data-transition="slidefade" class="text-capitalize fs-6">
                 <i class="fas fa-sign-out-alt text-blue"></i>
                 <span class="text-blue">Log out</span>
-            </a>
+            </div>
         </div>
     </div>
 
+    <!-- Search Page -->
     <div data-role="page" id="search" class="bg-yellow vh-100">
         <div data-role="header" data-position="fixed" class="d-flex justify-content-center align-items-center bg-yellow">
             <div class="cursor-pointer">
@@ -86,48 +88,212 @@
             <ul data-role="listview" class="m-1">
                 <li data-icon="false" class="bg-green shadow mb-2 d-flex justify-content-between align-items-center">
                     <span class="fs-4 text-dark px-2 ">Restaurant n°1</span>
-                    <a href="pages/restaurant.html" data-rel="page" data-transition="slidefade" class="bg-green p-4">
+                    <a href="#restaurant" data-rel="page" data-transition="slidefade" class="bg-green p-4">
                         <img src="img/svg/arrow-right-solid.svg" alt="arrow-right" class="w-2-rem m-2" />
                     </a>
                 </li>
                 <li data-icon="false" class="bg-green shadow mb-2 d-flex justify-content-between align-items-center">
                     <span class="fs-4 text-dark px-2 ">Restaurant n°2</span>
-                    <a href="pages/restaurant.html" data-rel="page" data-transition="slidefade" class="bg-green p-4">
+                    <a href="#restaurant" data-rel="page" data-transition="slidefade" class="bg-green p-4">
                         <img src="img/svg/arrow-right-solid.svg" alt="arrow-right" class="w-2-rem m-2" />
                     </a>
                 </li>
                 <li data-icon="false" class="bg-green shadow mb-2 d-flex justify-content-between align-items-center">
                     <span class="fs-4 text-dark px-2 ">Restaurant n°3</span>
-                    <a href="pages/restaurant.html" data-rel="page" data-transition="slidefade" class="bg-green p-4">
+                    <a href="#restaurant" data-rel="page" data-transition="slidefade" class="bg-green p-4">
                         <img src="img/svg/arrow-right-solid.svg" alt="arrow-right" class="w-2-rem m-2" />
                     </a>
                 </li>
                 <li data-icon="false" class="bg-green shadow mb-2 d-flex justify-content-between align-items-center">
                     <span class="fs-4 text-dark px-2 ">Restaurant n°4</span>
-                    <a href="pages/restaurant.html" data-rel="page" data-transition="slidefade" class="bg-green p-4">
+                    <a href="#restaurant" data-rel="page" data-transition="slidefade" class="bg-green p-4">
                         <img src="img/svg/arrow-right-solid.svg" alt="arrow-right" class="w-2-rem m-2" />
                     </a>
                 </li>
                 <li data-icon="false" class="bg-green shadow mb-2 d-flex justify-content-between align-items-center">
                     <span class="fs-4 text-dark px-2 ">Restaurant n°5</span>
-                    <a href="pages/restaurant.html" data-rel="page" data-transition="slidefade" class="bg-green p-4">
+                    <a href="#restaurant" data-rel="page" data-transition="slidefade" class="bg-green p-4">
                         <img src="img/svg/arrow-right-solid.svg" alt="arrow-right" class="w-2-rem m-2" />
                     </a>
                 </li>
             </ul>
         </div>
-        <div data-role="footer" data-position="fixed" class="w-100 h-50">
+        <div data-role="footer" id="search-footer" data-position="fixed" class="w-100 h-50">
             <div id="map-canvas">Map Canvas</div>
         </div>
     </div>
 
+    <!-- Sign Up Page -->
+    <div data-role="page" id="sign-up" class="vh-100 bg-yellow">
+        <div data-role="header" data-position="fixed" class="bg-yellow">
+            <!-- Red Back Arrow -->
+            <div class="fs-1 cursor-pointer">
+                <a data-rel="back" data-transition="slidefade" data-direction="reverse"
+                   class="text-decoration-none text-red">
+                    <img src="img/svg/arrow-left-solid.svg" alt="arrow-left" class="w-4-rem p-3">
+                </a>
+            </div>
+        </div>
+        <div data-role="main" class="ui-content p-5 d-flex flex-column justify-content-center h-100">
+            <!-- Page Content -->
+            <h1 class="text-green text-center">Create Account</h1>
+            <form class="mt-5" id="sign-up-form">
+                <div class="mb-3">
+                    <label for="nameInput" class="mb-2">Name: </label>
+                    <input type="text" id="nameInput" class="form-control bg-green" placeholder="John Smith">
+                </div>
+                <div class="mb-3">
+                    <label for="sign-up-email-input" class="mb-2">Email: </label>
+                    <input type="email" id="sign-up-email-input" class="form-control bg-green" placeholder="john.smith@gmail.com">
+                </div>
+                <div class="mb-3">
+                    <label for="sign-up-password-input" class="mb-2">Password: </label>
+                    <input type="password" id="sign-up-password-input" class="form-control bg-green" placeholder="********">
+                </div>
+                <div>
+                    <label for="sign-up-confirm-password-input" class="mb-2">Confirm Password: </label>
+                    <input type="password" id="sign-up-confirm-password-input" class="form-control bg-green" placeholder="********">
+                </div>
+                <button type="submit" class="rounded-btn w-100 py-2 bg-red text-light fs-6 mt-4 text-capitalize">Sign Up
+                </button>
+            </form>
+            <p class="text-center mt-4">
+                Already have an account?
+                <a href="#log-in" data-rel="page" data-transition="slidefade"
+                   class="text-green fw-bold text-capitalize text-decoration-none cursor-pointer">Log in</a>
+            </p>
+            <div class="fs-1 text-center">
+                <img id="sign-up-fb-icon" src="img/facebook-logo.png" class="social-media-icon mx-2" alt="facebook-logo"/>
+                <img id="sign-up-gmail-icon" src="img/google-logo.png" class="social-media-icon mx-2" alt="google-logo"/>
+            </div>
+        </div>
+    </div>
 
+    <!-- Log In Page -->
+    <div data-role="page" id="log-in" class="vh-100 bg-yellow">
+        <div data-role="header" data-position="fixed" class="bg-yellow">
+            <!-- Red Back Arrow -->
+            <div class="fs-1 cursor-pointer">
+                <a data-rel="back" data-transition="slidefade" data-direction="reverse" class="text-decoration-none text-red">
+                    <img src="img/svg/arrow-left-solid.svg" alt="arrow-left" class="w-4-rem p-3">
+                </a>
+            </div>
+        </div>
+        <div data-role="main" class="ui-content p-5 d-flex flex-column justify-content-center h-100">
+            <!-- Page Content -->
+            <h1 class="text-green text-center">Log In</h1>
+            <form class="mt-5" id="log-in-form">
+                <div class="mb-3">
+                    <label for="log-in-email-input" class="mb-2">Email: </label>
+                    <input type="email" id="log-in-email-input" class="form-control bg-green" placeholder="john.smith@gmail.com">
+                </div>
+                <div>
+                    <label for="log-in-password-input" class="mb-2">Password: </label>
+                    <input type="password" id="log-in-password-input" class="form-control bg-green" placeholder="********">
+                </div>
+                <button type="submit" class="rounded-btn w-100 py-2 bg-red text-light fs-6 mt-4 text-capitalize">Log In</button>
+            </form>
+            <p class="text-center mt-4">
+                Don't have an account yet?
+                <a href="#sign-up" data-rel="page" data-transition="slidefade" class="text-green fw-bold text-capitalize text-decoration-none cursor-pointer">Sign up</a>
+            </p>
+            <div class="fs-1 text-center">
+                <img id="log-in-fb-icon" src="img/facebook-logo.png" class="social-media-icon mx-2" alt="facebook-logo" />
+                <img id="log-in-gmail-icon" src="img/google-logo.png" class="social-media-icon mx-2" alt="google-logo" />
+            </div>
+        </div>
+    </div>
 
+    <!-- Favorite Page -->
+    <div data-role="page" id="favorite" class="vh-100 bg-yellow">
+        <div data-role="header" data-position="fixed" class="d-flex justify-content-center align-items-center bg-yellow">
+            <!-- Red Back Arrow -->
+            <div class="cursor-pointer">
+                <a data-rel="back" data-transition="slidefade" data-direction="reverse" class="text-decoration-none">
+                    <img src="img/svg/arrow-left-solid.svg" alt="arrow-left" class="w-4-rem p-3">
+                </a>
+            </div>
+            <h2 class="text-green fs-3">Favorite</h2>
+        </div>
+        <div data-role="main" class="ui-content p-5 d-flex flex-column justify-content-center h-100">
+            <!-- Page Content -->
+            <ul data-role="listview">
+                <li data-icon="false" class="bg-green shadow mb-2 d-flex justify-content-between align-items-center">
+                    <span class="fs-4 text-dark px-2 ">Restaurant n°1</span>
+                    <a href="#restaurant" data-rel="page" data-transition="slidefade" class="bg-green p-4">
+                        <img src="img/svg/arrow-right-solid.svg" alt="arrow-right" class="w-2-rem m-2"/>
+                    </a>
+                </li>
+                <li data-icon="false" class="bg-green shadow mb-2 d-flex justify-content-between align-items-center">
+                    <span class="fs-4 text-dark px-2 ">Restaurant n°2</span>
+                    <a href="#restaurant" data-rel="page" data-transition="slidefade" class="bg-green p-4">
+                        <img src="img/svg/arrow-right-solid.svg" alt="arrow-right" class="w-2-rem m-2"/>
+                    </a>
+                </li>
+                <li data-icon="false" class="bg-green shadow mb-2 d-flex justify-content-between align-items-center">
+                    <span class="fs-4 text-dark px-2 ">Restaurant n°4</span>
+                    <a href="#restaurant" data-rel="page" data-transition="slidefade" class="bg-green p-4">
+                        <img src="img/svg/arrow-right-solid.svg" alt="arrow-right" class="w-2-rem m-2"/>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Restaurant Page -->
+    <div data-role="page" id="restaurant" class="bg-yellow vh-100">
+        <div data-role="header" data-position="fixed" class="d-flex bg-yellow">
+            <div class="fs-1 cursor-pointer">
+                <a data-rel="back" data-transition="slidefade" data-direction="reverse" class="text-decoration-none text-red">
+                    <img src="img/svg/arrow-left-solid.svg" alt="arrow-left" class="w-4-rem p-3">
+                </a>
+            </div>
+            <div class="d-flex justify-content-center w-100">
+                <h2 class="text-green fs-3 align-self-center">Restaurant name</h2>
+            </div>
+            <div class="fs-1 p-2 w-4-rem">
+                <img id="star" src="img/svg/star-solid.svg" alt="star">
+            </div>
+        </div>
+        <div data-role="main" class="ui-content p-5 d-flex flex-column justify-content-center h-100">
+            <!-- Page Content -->
+            <div class="fs-4-rem d-flex justify-content-center align-items-center">
+                <img src="img/svg/hamburger-solid.svg" alt="food" class="w-4-rem">
+                <h1 class="text-red mx-5">Open Now</h1>
+            </div>
+            <div class="fs-4-rem text-center mt-4">
+                <img src="img/svg/star-solid.svg" alt="star" class="w-3-rem">
+                <img src="img/svg/star-solid.svg" alt="star" class="w-3-rem">
+                <img src="img/svg/star-solid.svg" alt="star" class="w-3-rem">
+                <img src="img/svg/star-half-alt-solid.svg" alt="star" class="w-3-rem">
+                <img src="img/svg/star-regular.svg" alt="star" class="w-3-rem">
+            </div>
+            <div>
+                <h3 class="fw-normal text-capitalize text-center mt-4">
+                    Total User ratings:
+                    <span class="text-red">1184</span>
+                </h3>
+            </div>
+            <div class="text-center mt-3 d-inline-flex align-self-center justify-content-center">
+                <h2 class="m-3 mt-0 mb-0 p-3 pt-2 pb-2 bg-green">bar</h2>
+                <h2 class="m-3 mt-0 mb-0 p-3 pt-2 pb-2 bg-green">food</h2>
+                <h2 class="m-3 mt-0 mb-0 p-3 pt-2 pb-2 bg-green">restaurant</h2>
+            </div>
+        </div>
+        <div data-role="footer" data-position="fixed" id="restaurant-footer" class="bg-yellow text-center">
+            <a href="#" data-rel="page" data-transition="slidefade" class="text-capitalize fs-6">
+                <i class="fas fa-sign-out-alt text-blue"></i>
+                <span class="text-blue">Log out</span>
+            </a>
+        </div>
+    </div>
+
+    <script type="module" src="js/firebase.js"></script>
     <!-- Bootstrap Bundle with Popper -->
     <script type="text/javascript" src="js/bootstrap.bundle.min.js"></script>
     <script type="text/javascript" src="cordova.js"></script>
-    <script type="text/javascript" src="js/index.js"></script>
-    <script type="module" src="js/geolocation.js" defer></script>
+    <script type="module" src="js/index.js"></script>
+    <script type="javascript" src="js/geolocation.js"></script>
 
 </body>
 
