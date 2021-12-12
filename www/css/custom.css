@@ -90,3 +90,8 @@
 input::placeholder {
     color: #52942F !important;
 }
+
+#map-canvas {
+    height: 100%;
+    width: 100%;
+}

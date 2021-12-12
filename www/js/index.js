@@ -2,7 +2,9 @@ import {
     GoogleAuthProvider,
     FacebookAuthProvider,
     signInWithRedirect,
+    getRedirectResult,
     createUserWithEmailAndPassword,
+    signInWithEmailAndPassword,
     signOut,
     getAuth
 } from 'https://www.gstatic.com/firebasejs/9.6.0/firebase-auth.js'
@@ -17,7 +19,7 @@ import {
 
         document.addEventListener('online', onOnline, false);
         document.addEventListener('offline', onOffline, false);
-        checkConnection();
+        //checkConnection();
 
         addListeners();
 
@@ -53,11 +55,16 @@ import {
     const facebookProvider = new FacebookAuthProvider()
     const auth = getAuth()
 
-    function gmailSignUp() {
+    function gmailAuth() {
         signInWithRedirect(auth, gmailProvider)
+            .then(() => {
+                return getRedirectResult(auth)
+            })
             .then((result) => {
                 // This gives you a Google Access Token. You can use it to access Google APIs.
                 const credential = GoogleAuthProvider.credentialFromResult(result);
+                // This gives you a Google Access Token.
+                // You can use it to access the Google API.
                 const token = credential.accessToken;
 
                 // The signed-in user info.
@@ -75,8 +82,11 @@ import {
         })
     }
 
-    function fbSignUp() {
+    function fbAuth() {
         signInWithRedirect(auth, facebookProvider)
+            .then(() => {
+                return getRedirectResult(auth)
+            })
             .then((result) => {
                 // This gives you a Facebook Access Token. You can use it to access the Facebook API.
                 const credential = FacebookAuthProvider.credentialFromResult(result);
@@ -97,11 +107,12 @@ import {
     }
 
     function emailPasswordSignUp() {
-        const email = document.getElementById("sign-up-email-input")
-        const password = document.getElementById("sign-up-password-input")
+        let email = document.getElementById("sign-up-email-input")
+        let password = document.getElementById("sign-up-password-input")
 
         createUserWithEmailAndPassword(auth, email, password)
             .then((userCredential) => {
+                alert(userCredential.user.email)
                 // Signed in
                 const user = userCredential.user;
                 localStorage.setItem("user", JSON.stringify(user))
@@ -109,8 +120,26 @@ import {
             .catch((error) => {
                 const errorCode = error.code;
                 const errorMessage = error.message;
+                alert(`${errorCode} = ${errorMessage}`)
                 // ..
             })
+    }
+
+    function emailPasswordLogin() {
+        let email = document.getElementById("log-in-email-input")
+        let password = document.getElementById("log-in-password-input")
+
+        signInWithEmailAndPassword(auth, email, password)
+            .then((userCredential) => {
+                // Signed in
+                const user = userCredential.user;
+                // ...
+                localStorage.setItem("user", JSON.stringify(user))
+            })
+            .catch((error) => {
+                const errorCode = error.code;
+                const errorMessage = error.message;
+            });
     }
 
     function logOut() {
@@ -125,16 +154,16 @@ import {
 
         // log in page
         $("#log-in-form").on('submit', () => { alert("login") })
-        $("#log-in-fb-icon").on('click' , () => { alert('facebook') })
-        $("#log-in-gmail-icon").on('click', () => { alert('gmail') } )
+        $("#log-in-fb-icon").on('click', () => { alert('facebook') })
+        $("#log-in-gmail-icon").on('click', () => { alert('gmail') })
         // Sign up Page
-        $("#sign-up-gmail-icon").on('click', () => { gmailSignUp() } )
-        $("#sign-up-fb-icon").on('click' , () => { fbSignUp() })
-        $("#sign-up-form").on('submit', () => { emailPasswordSignUp() })
+        $("#sign-up-form").on( 'submit', () => { emailPasswordSignUp() })
+        $("#sign-up-fb-icon").on('click', () => { fbAuth() })
+        $("#sign-up-gmail-icon").on('click', () => { gmailAuth() })
         // Restaurant Page
         $('#star').on('click', () => { alert(`${$('#star').attr('src')}`) })
         // Log out button
-        $("#log-out-btn").on('click' , () => { logOut() })
+        $("#log-out-btn").on('click', () => { logOut() })
     }
 
 })()

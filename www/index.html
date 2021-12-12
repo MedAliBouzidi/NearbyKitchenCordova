@@ -6,7 +6,7 @@
     <!--          content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;">-->
     <meta name="format-detection" content="telephone=no">
     <meta name="msapplication-tap-highlight" content="no">
-    <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
+    <meta name="viewport" content="initial-scale=1.0, width=device-width,  maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
     <meta name="color-scheme" content="light dark">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -25,8 +25,18 @@
     <!-- Custom CSS -->
     <link rel="stylesheet" href="css/custom.css">
 
-    <!-- Google Maps Api -->
-    <script async type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB36PAAvVMqyXDI2B6M8WqHFG5swgk5bpI&libraries=places"></script>
+    <!-- Load Leaflet from CDN -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+          integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+          crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+            integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+            crossorigin=""></script>
+
+    <!-- Load Esri Leaflet from CDN -->
+    <script src="https://unpkg.com/esri-leaflet@3.0.0/dist/esri-leaflet.js"></script>
+    <script src="https://unpkg.com/esri-leaflet-vector@3.0.0/dist/esri-leaflet-vector.js"></script>
+
 
 </head>
 
@@ -119,7 +129,7 @@
             </ul>
         </div>
         <div data-role="footer" id="search-footer" data-position="fixed" class="w-100 h-50">
-            <div id="map-canvas">Map Canvas</div>
+            <div id="map-canvas"></div>
         </div>
     </div>
 
@@ -288,12 +298,17 @@
         </div>
     </div>
 
+    <!-- Scripts -->
     <script type="module" src="js/firebase.js"></script>
+
+    <!-- Google Maps Api -->
+    <script async type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB36PAAvVMqyXDI2B6M8WqHFG5swgk5bpI&libraries=places"></script>
+
     <!-- Bootstrap Bundle with Popper -->
     <script type="text/javascript" src="js/bootstrap.bundle.min.js"></script>
     <script type="text/javascript" src="cordova.js"></script>
     <script type="module" src="js/index.js"></script>
-    <script type="javascript" src="js/geolocation.js"></script>
+    <script type="module" src="js/geolocation.js"></script>
 
 </body>
 
