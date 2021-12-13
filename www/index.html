@@ -33,11 +33,6 @@
             integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
             crossorigin=""></script>
 
-    <!-- Load Esri Leaflet from CDN -->
-    <script src="https://unpkg.com/esri-leaflet@3.0.0/dist/esri-leaflet.js"></script>
-    <script src="https://unpkg.com/esri-leaflet-vector@3.0.0/dist/esri-leaflet-vector.js"></script>
-
-
 </head>
 
 <body>
@@ -49,25 +44,25 @@
                 <img src="img/logo.png" class="w-15-rem" alt="logo">
             </div>
             <div id="menu" class="ui-grid-a">
-                <div class="ui-block-a text-center">
+                <div id="log-in-item" class="ui-block-a text-center">
                     <a href="#log-in" data-rel="page" data-transition="slidefade" class="ui-bar ui-bar-a bg-transparent border-0 p-2 text-decoration-none">
                         <div class="log-in-img shadow"></div>
                         <h2 class="text-capitalize text-center mt-2 text-green fs-3">Log in</h2>
                     </a>
                 </div>
-                <div class="ui-block-b text-center">
+                <div id="sig-up-item" class="ui-block-b text-center">
                     <a href="#sign-up" data-rel="page" data-transition="slidefade" class="ui-bar ui-bar-a bg-transparent border-0 p-2 text-decoration-none">
                         <div class="sign-up-img shadow"></div>
                         <h2 class="text-capitalize text-center mt-2 text-green fs-3">Sign up</h2>
                     </a>
                 </div>
-                <div class="ui-block-a text-center">
+                <div id="search-item" class="ui-block-a text-center">
                     <a href="#search" data-rel="page" data-transition="slidefade" class="ui-bar ui-bar-a bg-transparent border-0 p-2 text-decoration-none">
                         <div class="search-img shadow"></div>
                         <h2 class="text-capitalize text-center mt-2 text-green fs-3">Search</h2>
                     </a>
                 </div>
-                <div class="ui-block-b text-center">
+                <div id="favorite-item" class="ui-block-b text-center">
                     <a href="#favorite" data-rel="page" data-transition="slidefade" class="ui-bar ui-bar-a bg-transparent border-0 p-2 text-decoration-none">
                         <div class="favorite-img shadow"></div>
                         <h2 class="text-capitalize text-center mt-2 text-green fs-3">Favorite</h2>
@@ -75,9 +70,9 @@
                 </div>
             </div>
         </div>
-        <div data-role="footer" data-position="fixed" id="home-footer" class="bg-yellow text-center" hidden>
+        <div data-role="footer" data-position="fixed" id="logout" class="bg-yellow text-center">
             <div id="log-out-btn" data-rel="page" data-transition="slidefade" class="text-capitalize fs-6">
-                <i class="fas fa-sign-out-alt text-blue"></i>
+                <img src="img/svg/sign-out-alt-solid.svg" alt="sign-out" class="w-4-rem p-3">
                 <span class="text-blue">Log out</span>
             </div>
         </div>
@@ -128,7 +123,7 @@
                 </li>
             </ul>
         </div>
-        <div data-role="footer" id="search-footer" data-position="fixed" class="w-100 h-50">
+        <div data-role="footer" data-position="fixed" class="w-100 h-50">
             <div id="map-canvas"></div>
         </div>
     </div>
@@ -149,8 +144,8 @@
             <h1 class="text-green text-center">Create Account</h1>
             <form class="mt-5" id="sign-up-form">
                 <div class="mb-3">
-                    <label for="nameInput" class="mb-2">Name: </label>
-                    <input type="text" id="nameInput" class="form-control bg-green" placeholder="John Smith">
+                    <label for="sign-up-name-input" class="mb-2">Name: </label>
+                    <input type="text" id="sign-up-name-input" class="form-control bg-green" placeholder="John Smith">
                 </div>
                 <div class="mb-3">
                     <label for="sign-up-email-input" class="mb-2">Email: </label>
@@ -289,12 +284,6 @@
                 <h2 class="m-3 mt-0 mb-0 p-3 pt-2 pb-2 bg-green">food</h2>
                 <h2 class="m-3 mt-0 mb-0 p-3 pt-2 pb-2 bg-green">restaurant</h2>
             </div>
-        </div>
-        <div data-role="footer" data-position="fixed" id="restaurant-footer" class="bg-yellow text-center">
-            <a href="#" data-rel="page" data-transition="slidefade" class="text-capitalize fs-6">
-                <i class="fas fa-sign-out-alt text-blue"></i>
-                <span class="text-blue">Log out</span>
-            </a>
         </div>
     </div>
 

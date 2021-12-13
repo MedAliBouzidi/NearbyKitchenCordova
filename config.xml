@@ -48,4 +48,8 @@
     </universal-links>
     <preference name="AndroidLaunchMode" value="singleTask" />
 
+    <!-- Status Bar Plugin -->
+    <preference name="StatusBarOverlaysWebView" value="false" />
+    <preference name="StatusBarBackgroundColor" value="#FFF2CD" />
+    <preference name="StatusBarStyle" value="default" />
 </widget>

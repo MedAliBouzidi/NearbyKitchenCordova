@@ -1,6 +1,3 @@
-const apiKey = "AAPKb3c5ec80528a4687b8ecc2ad63602d46d0t3OczmYXmyCHdzNuUoI3PL0HUz62stGWbJHFRGzN-hBYHZgRDCyHjR7nvQAfJM"
-const basemapEnum = "ArcGIS:Streets"
-
 navigator.geolocation.getCurrentPosition(onSuccess, onError);
 
 function onSuccess(position) {
